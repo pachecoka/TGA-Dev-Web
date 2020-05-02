@@ -1,40 +1,43 @@
-if(localStorage.darkMode == "true"){
+if (localStorage.nome) {
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
+}
+
+if (localStorage.darkMode == "true") {
     document.getElementById("darkSwitch").checked = true;
     toggleDarkMode();
 }
 
-var isMenuLateralOpen = true;
+if (localStorage.isMenuLateralOpen === 'false')
+    closeMenu();
 
 document.getElementById("menu").onclick = function openNav() {
-    if (isMenuLateralOpen) {
+    if (localStorage.isMenuLateralOpen == undefined || JSON.parse(localStorage.isMenuLateralOpen) === true) {
         closeMenu();
     } else {
         openMenu();
     }
-
-    localStorage.setItem("isMenuLateralOpen", isMenuLateralOpen);
 }
 
 function openMenu() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-    isMenuLateralOpen = true;
+    localStorage.setItem("isMenuLateralOpen", true);
 }
 
 function closeMenu() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.body.style.backgroundColor = "white";
-    isMenuLateralOpen = false;
+    localStorage.setItem("isMenuLateralOpen", false);
 }
 
 function toggleDarkMode() {
     document.getElementById("main").classList.toggle("dark");
     document.getElementById("mySidenav").classList.toggle("dark");
-    if(document.getElementById("darkSwitch").checked) {
-        localStorage.setItem("darkMode" , "true");
+    if (document.getElementById("darkSwitch").checked) {
+        localStorage.setItem("darkMode", "true");
     } else {
-        localStorage.setItem("darkMode" , "false");
+        localStorage.setItem("darkMode", "false");
     }
 }
 
@@ -45,7 +48,7 @@ function myAccFunc() {
         cursosDiv.previousElementSibling.className += "paintCadetBlue";
     } else {
         cursosDiv.className = cursosDiv.className.replace(" w3-show", "");
-        cursosDiv.previousElementSibling.className = 
+        cursosDiv.previousElementSibling.className =
             cursosDiv.previousElementSibling.className.replace("paintCadetBlue", "");
     }
 }
@@ -56,14 +59,4 @@ document.getElementById("enviar-usuario").onclick = function () {
     localStorage.setItem("nome", nome);
 
     document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
-}
-
-if (localStorage.nome) {
-    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
-}
-
-if (localStorage.isMenuLateralOpen == undefined || JSON.parse(localStorage.isMenuLateralOpen) === true) {
-    openMenu();
-} else {
-    closeMenu();
 }
