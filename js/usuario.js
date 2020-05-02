@@ -22,7 +22,7 @@ document.getElementById("usuario").onclick = function () {
 
     document.getElementById("main").innerHTML += 
       "<footer class=\"container-fluid bg-4 text-center\">"+
-        "<button onclick=\"updateUsuario()\" id=\"update-usuario\" type=\"submit\" class=\"btn-footer btn btn-default\">Submit</button>"+
+        "<button onclick=\"updateUsuario()\" id=\"update-usuario\" type=\"submit\" class=\"btn-footer btn btn-default\">Enviar</button>"+
         "<button onclick=\"clearUserValues()\" id=\"clear-usuario\" class=\"btn-footer btn btn-default\">Limpar</button>"+
         "<p>Trabalho Grau A Desenvolvimento Web</p>"+ 
       "</footer>"
