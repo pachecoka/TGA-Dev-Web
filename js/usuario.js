@@ -18,8 +18,14 @@ document.getElementById("usuario").onclick = function () {
         "<label for=\"email\">Email:</label>"+
         "<input type=\"email\" class=\"form-control\" id=\"email\">"+
       "</div><br>"+
-      "<button onclick=\"updateUsuario()\" id=\"update-usuario\" type=\"submit\" class=\"btn btn-default\" style=\"float: right;\">Submit</button>"+
     "</form>";
+
+    document.getElementById("main").innerHTML += 
+      "<footer class=\"container-fluid bg-4 text-center\">"+
+        "<button onclick=\"updateUsuario()\" id=\"update-usuario\" type=\"submit\" class=\"btn-footer btn btn-default\">Submit</button>"+
+        "<button onclick=\"clearUserValues()\" id=\"clear-usuario\" class=\"btn-footer btn btn-default\">Limpar</button>"+
+        "<p>Trabalho Grau A Desenvolvimento Web</p>"+ 
+      "</footer>"
 
   document.getElementById("content-section").innerHTML = value;
   initializeUserFields();
@@ -37,6 +43,18 @@ function updateUsuario() {
   localStorage.setItem("email", email);
 
   document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
+}
+
+function clearUserValues(){
+  var nomeUsuario = document.getElementById("nome-usuario").value = '';
+  var nome = document.getElementById("nome").value = '';
+  var sobrenome = document.getElementById("sobrenome").value = '';
+  var email = document.getElementById("email").value = '';
+
+  localStorage.setItem("nomeUsuario", nomeUsuario);
+  localStorage.setItem("nome", nome);
+  localStorage.setItem("sobrenome", sobrenome);
+  localStorage.setItem("email", email);
 }
 
 function initializeUserFields(){

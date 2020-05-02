@@ -183,3 +183,7 @@ nav {
 .goog-te-banner-frame {
     display: none !important;
 }
+
+.btn-footer{
+  float: right;
+}
