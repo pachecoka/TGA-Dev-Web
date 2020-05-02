@@ -1,3 +1,4 @@
+//Controle variaveis do storage
 if (localStorage.nome) {
     document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
 }
@@ -10,7 +11,13 @@ if (localStorage.darkMode == "true") {
 if (localStorage.isMenuLateralOpen === 'false')
     closeMenu();
 
-var comboGoogleTradutor = null; 
+if (localStorage.showCursos === 'true') {
+    var cursosDiv = document.getElementById("cursos");
+    cursosDiv.className += " w3-show";
+    cursosDiv.previousElementSibling.className += "paintCadetBlue";
+}
+
+var comboGoogleTradutor = null;
 
 document.getElementById("menu").onclick = function openNav() {
     if (localStorage.isMenuLateralOpen == undefined || JSON.parse(localStorage.isMenuLateralOpen) === true) {
@@ -43,15 +50,17 @@ function toggleDarkMode() {
     }
 }
 
-function myAccFunc() {
+function showCursos() {
     var cursosDiv = document.getElementById("cursos");
     if (cursosDiv.className.indexOf("w3-show") == -1) {
         cursosDiv.className += " w3-show";
         cursosDiv.previousElementSibling.className += "paintCadetBlue";
+        localStorage.setItem("showCursos", true);
     } else {
         cursosDiv.className = cursosDiv.className.replace(" w3-show", "");
         cursosDiv.previousElementSibling.className =
             cursosDiv.previousElementSibling.className.replace("paintCadetBlue", "");
+        localStorage.setItem("showCursos", false);
     }
 }
 
@@ -62,6 +71,7 @@ document.getElementById("enviar-usuario").onclick = function () {
 
     document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
 }
+
 //Região de métodos de controle do idioma
 document.getElementById("idioma-pt-br").onclick = function () {
     var idioma = "pt";
