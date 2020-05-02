@@ -112,6 +112,14 @@ body {
   background-color: cadetblue;
 }
 
+#update-usuario{
+  background-color: cadetblue;
+}
+
+.usuario-form input{
+  width: 200px;
+}
+
 .header-right {
   float: right;
 }
