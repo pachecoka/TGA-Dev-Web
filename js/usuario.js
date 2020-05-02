@@ -20,7 +20,7 @@ document.getElementById("usuario").onclick = function () {
       "</div><br>"+
     "</form>";
 
-    document.getElementById("main").innerHTML += 
+    document.getElementById("page-footer").innerHTML = 
       "<footer class=\"container-fluid bg-4 text-center\">"+
         "<button onclick=\"updateUsuario()\" id=\"update-usuario\" type=\"submit\" class=\"btn-footer btn btn-default\">Enviar</button>"+
         "<button onclick=\"clearUserValues()\" id=\"clear-usuario\" class=\"btn-footer btn btn-default\">Limpar</button>"+
@@ -43,6 +43,8 @@ function updateUsuario() {
   localStorage.setItem("email", email);
 
   document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
+
+  alert("Usuário Atualizado com Sucesso!");
 }
 
 function clearUserValues(){
