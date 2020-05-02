@@ -39,14 +39,14 @@ function toggleDarkMode() {
 }
 
 function myAccFunc() {
-    var x = document.getElementById("demoAcc");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-green";
+    var cursosDiv = document.getElementById("cursos");
+    if (cursosDiv.className.indexOf("w3-show") == -1) {
+        cursosDiv.className += " w3-show";
+        cursosDiv.previousElementSibling.className += "paintCadetBlue";
     } else {
-        x.className = x.className.replace(" w3-show", "");
-        x.previousElementSibling.className =
-            x.previousElementSibling.className.replace(" w3-green", "");
+        cursosDiv.className = cursosDiv.className.replace(" w3-show", "");
+        cursosDiv.previousElementSibling.className = 
+            cursosDiv.previousElementSibling.className.replace("paintCadetBlue", "");
     }
 }
 
