@@ -154,3 +154,13 @@ section p {
 	margin-bottom: 30px;
 	text-align: center;
 }
+
+ul,
+nav {
+	list-style: none;
+}
+
+.img-idioma img {
+    height: 20px;
+    width: 25px;
+}
