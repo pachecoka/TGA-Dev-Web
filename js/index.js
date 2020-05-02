@@ -66,7 +66,7 @@ document.getElementById("idioma-pt-br").onclick = function () {
 
     localStorage.setItem("idioma", idioma);
     traduzirPt();
-   
+
 }
 
 document.getElementById("idioma-en").onclick = function () {
