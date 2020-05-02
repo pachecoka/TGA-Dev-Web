@@ -21,21 +21,22 @@
 </head>
 
 <body>
-        <div class="sidenav" id="mySidenav">
-                <a href="#">Sobre</a>
-                <a href="#">Serviços</a>
-                <a href="#">Clientes</a>
-                <a href="#">Contato</a>
-                <a href="#" data-toggle="modal" data-target="#myModal">Usuario</a>
-                <a href="#" onclick="myAccFunc()">
-                        Cursos <i class="fa fa-caret-down"></i>
-                </a>
-                <div id="cursos" class="w3-hide w3-white w3-card">
-                        <a href="#" class="w3-bar-item w3-button">Curso 1</a>
-                        <a href="#" class="w3-bar-item w3-button">Curso 2</a>
-                        <a href="#" class="w3-bar-item w3-button">Curso 3</a>
-                </div>
+
+    <div class="sidenav" id="mySidenav">
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Clientes</a>
+        <a href="#">Contato</a>
+        <a href="#" data-toggle="modal" data-target="#myModal">Usuario</a>
+        <a href="#" onclick="myAccFunc()">
+            Cursos <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="cursos" class="w3-hide w3-white w3-card">
+            <a href="#" class="w3-bar-item w3-button">Curso 1</a>
+            <a href="#" class="w3-bar-item w3-button">Curso 2</a>
+            <a href="#" class="w3-bar-item w3-button">Curso 3</a>
         </div>
+    </div>
 
     <div class="main" id="main">
         <div class="header">
@@ -50,8 +51,10 @@
                     <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
                 </div>
                 <div class="img-idioma">
-                    <a id="idioma-pt-br" onclick="traduzPTBR()"><img src="img/bandeira_br.png" alt="Bandeira do Brasil"></a>
-                    <a id="idioma-en" onclick="traduzEN()"><img src="img/bandeira_eua.png" alt="Bandeira do Brasil"></a>
+                    <div id="google_translate_element"></div>
+                    <a id="idioma-pt-br" onclick="trocarIdioma('pt')"><img src="img/bandeira_br.png" alt="Bandeira do Brasil"></a>
+                    <a id="idioma-en" onclick="trocarIdioma('en')"><img src="img/bandeira_eua.png" alt="Bandeira do Brasil"></a>
+
                 </div>
             </div>
 
@@ -139,6 +142,7 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
