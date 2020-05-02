@@ -3,10 +3,6 @@ if(localStorage.darkMode == "true"){
     toggleDarkMode();
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
 var isMenuLateralOpen = true;
 
 document.getElementById("menu").onclick = function openNav() {
