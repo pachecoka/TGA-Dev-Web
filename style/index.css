@@ -194,6 +194,15 @@ nav {
   float: right;
 }
 
+#clear-usuario{
+  border: 2px solid cadetblue;
+  margin-right: 15px;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
 .card-body {
   background-color: var(--card);
   color: var(--card-text); 
