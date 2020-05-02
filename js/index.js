@@ -1,3 +1,6 @@
+//guardar html main inicial
+var initialInnerHtml = document.getElementById("main").innerHTML;
+
 //Controle variaveis do storage
 if (localStorage.nomeUsuario) {
     document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
@@ -134,3 +137,7 @@ function trocarIdioma(sigla) {
     }
 }
 //Fim da região de métodos de controle do idioma
+
+document.getElementById("home").onclick = function () {
+    document.getElementById("main").innerHTML = initialInnerHtml;
+}
