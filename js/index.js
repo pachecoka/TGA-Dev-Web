@@ -30,6 +30,7 @@ function closeMenu() {
 
 function toggleDarkMode() {
     document.getElementById("main").classList.toggle("dark");
+    document.getElementById("mySidenav").classList.toggle("dark");
     if(document.getElementById("darkSwitch").checked) {
         localStorage.setItem("darkMode" , "true");
     } else {

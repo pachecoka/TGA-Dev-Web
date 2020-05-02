@@ -4,12 +4,20 @@
 
 :root {  
   --main: white;
-  --main-text: black;	
+  --main-text: black;
+  --sidenav:#111;
+  --sidenav-text:#818181;	
+  --header: #f1f1f1;
+  --header-text: black;
 }
 
 .dark {
   --main: black;
   --main-text: white;	
+  --sidenav:#818181;
+  --sidenav-text:#111;
+  --header: black;
+  --header-text: #f1f1f1;
 }
 
 body {
@@ -24,7 +32,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: var(--sidenav);
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -33,7 +41,7 @@ body {
     padding: 6px 6px 6px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: var(--sidenav-text);
     display: block;
 }
 
@@ -72,13 +80,13 @@ body {
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: var(--header);
   padding: 20px 10px;
 }
 
 .header a {
   float: left;
-  color: black;
+  color: var(--header-text);
   text-align: center;
   padding: 12px;
   text-decoration: none;
