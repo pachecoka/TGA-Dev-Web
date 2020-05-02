@@ -194,3 +194,7 @@ nav {
 .card {
   margin: 5px 0;
 }
+
+#invisivel {
+  display: none !important;
+}

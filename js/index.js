@@ -3,6 +3,16 @@ if (localStorage.nomeUsuario) {
     document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
 }
 
+for (let index = 1; index < 5; index++) {
+    var curso = `curso${index}`;
+    var show = `show-${curso}`;
+    if(localStorage[curso] == "true") {
+        console.log(curso);
+        console.log(show);
+        document.getElementById(show).innerHTML = document.getElementById(curso).innerHTML;
+    }
+}
+
 if (localStorage.darkMode == "true") {
     document.getElementById("darkSwitch").checked = true;
     toggleDarkMode();
@@ -48,6 +58,11 @@ function toggleDarkMode() {
     } else {
         localStorage.setItem("darkMode", "false");
     }
+}
+
+function buyCourse(i) {
+    var curso = `curso${i}`;
+    localStorage.setItem(curso , "true");
 }
 
 function showCursos() {

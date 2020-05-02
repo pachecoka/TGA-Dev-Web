@@ -29,9 +29,10 @@
             Cursos <i class="fa fa-caret-down"></i>
         </a>
         <div id="cursos" class="w3-hide w3-card">
-            <a href="#" class="w3-bar-item w3-button">Curso 1</a>
-            <a href="#" class="w3-bar-item w3-button">Curso 2</a>
-            <a href="#" class="w3-bar-item w3-button">Curso 3</a>
+            <a href="#" class="w3-bar-item w3-button" id="show-curso1 invisivel">1</a>
+            <a href="#" class="w3-bar-item w3-button" id="show-curso2 invisivel">2</a>
+            <a href="#" class="w3-bar-item w3-button" id="show-curso3 invisivel">3</a>
+            <a href="#" class="w3-bar-item w3-button" id="show-curso4 invisivel">4</a>
         </div>
     </div>
 
@@ -72,9 +73,9 @@
                   <img class="card-img-top" src="img/curso1.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="float-right">$9.90</p>
-                    <h5 class="card-title">Bootcamp de JavaScript moderno</h5>
+                    <h5 class="card-title" id="curso1">Bootcamp de JavaScript moderno</h5>
                     <p class="card-text">O mais atualizado recurso JS online! Domine o Javascript criando um belo portfólio de projetos!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a class="btn btn-success" onclick="buyCourse(1)">Comprar</a>
                   </div>
                 </div>
                 </li>
@@ -84,10 +85,9 @@
                   <img class="card-img-top" src="img/curso2.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="float-right">$4.90</p>
-                    <h5 class="card-title">Desenvolvimento Web Básico</h5>
+                    <h5 class="card-title" id="curso2">Desenvolvimento Web Básico</h5>
                     <p class="card-text">O único curso que você precisa para aprender desenvolvimento web - HTML, CSS, JS, Node e muito mais!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+                    <a class="btn btn-success" onclick="buyCourse(2)">Comprar</a>                  </div>
                 </div>
                 </li>
 
@@ -96,10 +96,9 @@
                   <img class="card-img-top" src="img/curso3.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="float-right">$12.90</p>
-                    <h5 class="card-title">Desenvolvimento Web Avançado</h5>
+                    <h5 class="card-title" id="curso3">Desenvolvimento Web Avançado</h5>
                     <p class="card-text">Aprenda React 16, Redux, D3, ES2015, Teste, CSS Flexbox, Animações, SVG, AJAX e muito mais!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+                    <a class="btn btn-success" onclick="buyCourse(3)">Comprar</a>                  </div>
                 </div>
                 </li>
 
@@ -108,10 +107,9 @@
                   <img class="card-img-top" src="img/curso4.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="float-right">$19.90</p>
-                    <h5 class="card-title">The Modern React Bootcamp (Hooks, Context, NextJS, Router)</h5>
+                    <h5 class="card-title" id="curso4">The Modern React Bootcamp (Hooks, Context, NextJS, Router)</h5>
                     <p class="card-text">Apenas publicado! Siga o mesmo currículo que ensino aos meus alunos em SF. 10+ projetos, incluindo uma aplicação ENORME!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+                    <a class="btn btn-success" onclick="buyCourse(4)">Comprar</a>                  </div>
                 </div>
                 </li>
             </ul>
