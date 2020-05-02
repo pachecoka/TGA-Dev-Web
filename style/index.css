@@ -124,6 +124,10 @@ body {
   width: 200px;
 }
 
+#email {
+  width: 350px;
+}
+
 .header-right {
   float: right;
 }
