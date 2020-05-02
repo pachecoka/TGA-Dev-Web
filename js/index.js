@@ -1,12 +1,26 @@
-function closeNav() {
+var isMenuLateralOpen = true;
+
+document.getElementById("menu").onclick = function openNav() {
+    if (isMenuLateralOpen) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+
+    localStorage.setItem("isMenuLateralOpen", isMenuLateralOpen);
+}
+
+function openMenu() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    isMenuLateralOpen = true;
+}
+
+function closeMenu() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.body.style.backgroundColor = "white";
-}
-
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    isMenuLateralOpen = false;
 }
 
 function toggleDarkMode() {
@@ -23,4 +37,10 @@ document.getElementById("enviar-usuario").onclick = function () {
 
 if (localStorage.nome) {
     document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
+}
+
+if (localStorage.isMenuLateralOpen == undefined || JSON.parse(localStorage.isMenuLateralOpen) === true) {
+    openMenu();
+} else {
+    closeMenu();
 }
