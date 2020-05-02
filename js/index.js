@@ -1,3 +1,12 @@
+if(localStorage.darkMode == "true"){
+    document.getElementById("darkSwitch").checked = true;
+    toggleDarkMode();
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
 var isMenuLateralOpen = true;
 
 document.getElementById("menu").onclick = function openNav() {
@@ -25,6 +34,11 @@ function closeMenu() {
 
 function toggleDarkMode() {
     document.getElementById("main").classList.toggle("dark");
+    if(document.getElementById("darkSwitch").checked) {
+        localStorage.setItem("darkMode" , "true");
+    } else {
+        localStorage.setItem("darkMode" , "false");
+    }
 }
 
 document.getElementById("enviar-usuario").onclick = function () {
