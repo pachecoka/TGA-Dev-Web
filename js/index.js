@@ -10,5 +10,17 @@ function openNav() {
 }
 
 function toggleDarkMode() {
-	document.getElementById("main").classList.toggle("dark");
+    document.getElementById("main").classList.toggle("dark");
+}
+
+document.getElementById("enviar-usuario").onclick = function () {
+    var nome = document.getElementById("nome-usuario").value;
+
+    localStorage.setItem("nome", nome);
+
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
+}
+
+if (localStorage.nome) {
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
 }
