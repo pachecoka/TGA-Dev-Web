@@ -116,12 +116,16 @@ body {
   background-color: cadetblue;
 }
 
-#update-usuario{
+#update-usuario, #enviar-contato{
   background-color: cadetblue;
 }
 
 .usuario-form input{
   width: 200px;
+}
+
+#email {
+  width: 350px;
 }
 
 .header-right {
@@ -184,6 +188,19 @@ nav {
 
 .goog-te-banner-frame {
     display: none !important;
+}
+
+.btn-footer{
+  float: right;
+}
+
+#clear-usuario{
+  border: 2px solid cadetblue;
+  margin-right: 15px;
+}
+
+footer {
+  margin-bottom: 30px;
 }
 
 .card-body {
