@@ -19,6 +19,10 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 01ac8f5946a71590f3978de96327395730a852b3
     <div class="sidenav" id="mySidenav">
         <a href="#">Sobre</a>
         <a href="#">Serviços</a>
@@ -47,9 +51,10 @@
                     <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
                 </div>
                 <div class="img-idioma">
-                    <a id="idioma-pt-br" onclick="traduzPTBR()"><img src="img/bandeira_br.png"
-                            alt="Bandeira do Brasil"></a>
-                    <a id="idioma-en" onclick="traduzEN()"><img src="img/bandeira_eua.png" alt="Bandeira do Brasil"></a>
+                    <div id="google_translate_element"></div>
+                    <a id="idioma-pt-br" onclick="trocarIdioma('pt')"><img src="img/bandeira_br.png" alt="Bandeira do Brasil"></a>
+                    <a id="idioma-en" onclick="trocarIdioma('en')"><img src="img/bandeira_eua.png" alt="Bandeira do Brasil"></a>
+
                 </div>
             </div>
 
@@ -131,8 +136,10 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
         </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script>
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

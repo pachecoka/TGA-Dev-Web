@@ -10,6 +10,8 @@ if (localStorage.darkMode == "true") {
 if (localStorage.isMenuLateralOpen === 'false')
     closeMenu();
 
+var comboGoogleTradutor = null; 
+
 document.getElementById("menu").onclick = function openNav() {
     if (localStorage.isMenuLateralOpen == undefined || JSON.parse(localStorage.isMenuLateralOpen) === true) {
         closeMenu();
@@ -60,34 +62,65 @@ document.getElementById("enviar-usuario").onclick = function () {
 
     document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
 }
-
+//Região de métodos de controle do idioma
 document.getElementById("idioma-pt-br").onclick = function () {
-    var idioma = "ptbr";
+    var idioma = "pt";
 
     localStorage.setItem("idioma", idioma);
-    traduzirPt();
+    trocarIdioma("pt");
 
-}
+};
 
 document.getElementById("idioma-en").onclick = function () {
     var idioma = "en";
 
     localStorage.setItem("idioma", idioma);
-    traduzirEn();
-}
+    trocarIdioma("en");
+};
 
-if (localStorage.idioma == "ptbr") {
-    traduzirPt();
+if (localStorage.idioma == "pt") {
+    console.log(localStorage.idioma);
+    trocarIdioma("pt");
 }
 
 if (localStorage.idioma == "en") {
-    traduzirEn();
+    console.log(localStorage.idioma);
+    trocarIdioma("en");
 }
 
-function traduzirPt() {
-    console.log(localStorage.idioma);
+//function traduzirPt() {
+//    console.log(localStorage.idioma);
+//    trocarIdioma("pt");
+//}
+
+//function traduzirEn() {
+//    console.log(localStorage.idioma);
+//    trocarIdioma("en");
+//}
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        includedLanguages: 'en,pt'
+    }, 'google_translate_element');
+
+    comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
 }
 
-function traduzirEn() {
-    console.log(localStorage.idioma);
+function changeEvent(el) {
+    if (el.fireEvent) {
+        el.fireEvent('onchange');
+    } else {
+        var evObj = document.createEvent("HTMLEvents");
+
+        evObj.initEvent("change", false, true);
+        el.dispatchEvent(evObj);
+    }
 }
+
+function trocarIdioma(sigla) {
+    if (comboGoogleTradutor) {
+        comboGoogleTradutor.value = sigla;
+        changeEvent(comboGoogleTradutor);//Dispara a troca
+    }
+}
+//Fim da região de métodos de controle do idioma
