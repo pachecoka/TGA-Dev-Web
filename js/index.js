@@ -1,3 +1,8 @@
+if(localStorage.darkMode == "true"){
+    document.getElementById("darkSwitch").checked = true;
+    toggleDarkMode();
+}
+
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
@@ -11,6 +16,11 @@ function openNav() {
 
 function toggleDarkMode() {
     document.getElementById("main").classList.toggle("dark");
+    if(document.getElementById("darkSwitch").checked) {
+        localStorage.setItem("darkMode" , "true");
+    } else {
+        localStorage.setItem("darkMode" , "false");
+    }
 }
 
 document.getElementById("enviar-usuario").onclick = function () {
