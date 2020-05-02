@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
                 integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
                 crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -24,55 +27,69 @@
                 <a href="#">Clientes</a>
                 <a href="#">Contato</a>
                 <a href="#" data-toggle="modal" data-target="#myModal">Usuario</a>
+                <a href="#" onclick="myAccFunc()">
+                        Cursos <i class="fa fa-caret-down"></i>
+                </a>
+                <div id="demoAcc" class="w3-hide w3-white w3-card">
+                        <a href="#" class="w3-bar-item w3-button">Curso 1</a>
+                        <a href="#" class="w3-bar-item w3-button">Curso 2</a>
+                        <a href="#" class="w3-bar-item w3-button">Curso 3</a>
+                </div>
         </div>
 
         <div class="main" id="main">
-            <div class="header">
-                <a style="font-size:30px;cursor:pointer" id="menu" class="hover">&#9776;</a>
-                <a id="field-nome-usuario" style="font-size:30px" class="hover">Sem dados do usuário</a>
-                <a style="font-size:30px;cursor:pointer" id="teste" class="hover" data-toggle="modal" data-target="#myModal">&#8634;</a>
-                <div class="header-right">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="darkSwitch"
-                               onclick="toggleDarkMode()">
-                        <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-                    </div>
-                    <div class="img-idioma">
-                        <img src="img/bandeira_br.png" alt="Bandeira do Brasil">
-                        <img src="img/bandeira_eua.png" alt="Bandeira do Brasil">
-                    </div>
+                <div class="header">
+                        <a style="font-size:30px;cursor:pointer" id="menu" class="hover">&#9776;</a>
+                        <a id="field-nome-usuario" style="font-size:30px" class="hover">Sem dados do usuário</a>
+                        <a style="font-size:30px;cursor:pointer" id="teste" class="hover" data-toggle="modal"
+                                data-target="#myModal">&#8634;</a>
+                        <div class="header-right">
+                                <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="darkSwitch"
+                                                onclick="toggleDarkMode()">
+                                        <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+                                </div>
+                                <div class="img-idioma">
+                                        <img src="img/bandeira_br.png" alt="Bandeira do Brasil">
+                                        <img src="img/bandeira_eua.png" alt="Bandeira dos Estados Unidos">
+                                </div>
+                        </div>
+
                 </div>
 
-            </div>
-            
                 <section class="packages">
                         <h3 class="title">Tour Packages</h3>
-                        <p>We offer a variety of mountaineering packages. Whether you've climbed Everest or don't even know what a mountain is, we've got the perfect vacation for you.</p>
+                        <p>We offer a variety of mountaineering packages. Whether you've climbed Everest or don't even
+                                know what a mountain is, we've got the perfect vacation for you.</p>
                         <hr>
-                    
+
                         <ul class="grid">
-                          <li>
-                            <i class="fa fa-compass fa-4x"></i>
-                            <h4>Guided Trips</h4>
-                            <p>Looking for the complete experience? Take a tour with one of our experts. They'll show you secrets that you're likely to miss otherwise.</p>
-                          </li>
-                          <li>
-                            <i class="fa fa-camera-retro fa-4x"></i>
-                            <h4>Photo Trips</h4>
-                            <p>Want to experience nature's beauty without all of that annoying exercise? Take a photo tour on one of our mountain buses.</p>
-                          </li>
-                          <li>
-                            <i class="fa fa-bicycle fa-4x"></i>
-                            <h4>Biking Trips</h4>
-                            <p>If bicycles are more your speed, consider taking a tour through one of our mountain bike paths. We'll provide the bikes, and lunch too!</p>
-                          </li>
-                          <li>
-                            <i class="fa fa-flag-checkered fa-4x"></i>
-                            <h4>Racing Trips</h4>
-                            <p>Got a competitive spirit? Sign up for one of our mountain marathons! Try to reach the summit before anyone else.</p>
-                          </li>
+                                <li>
+                                        <i class="fa fa-compass fa-4x"></i>
+                                        <h4>Guided Trips</h4>
+                                        <p>Looking for the complete experience? Take a tour with one of our experts.
+                                                They'll show you secrets that you're likely to miss otherwise.</p>
+                                </li>
+                                <li>
+                                        <i class="fa fa-camera-retro fa-4x"></i>
+                                        <h4>Photo Trips</h4>
+                                        <p>Want to experience nature's beauty without all of that annoying exercise?
+                                                Take a photo tour on one of our mountain buses.</p>
+                                </li>
+                                <li>
+                                        <i class="fa fa-bicycle fa-4x"></i>
+                                        <h4>Biking Trips</h4>
+                                        <p>If bicycles are more your speed, consider taking a tour through one of our
+                                                mountain bike paths. We'll provide the bikes, and lunch too!</p>
+                                </li>
+                                <li>
+                                        <i class="fa fa-flag-checkered fa-4x"></i>
+                                        <h4>Racing Trips</h4>
+                                        <p>Got a competitive spirit? Sign up for one of our mountain marathons! Try to
+                                                reach the summit before anyone else.</p>
+                                </li>
                         </ul>
-                      </section>
+                </section>
         </div>
 
         <!-- Modal -->
