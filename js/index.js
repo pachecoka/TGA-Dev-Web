@@ -67,3 +67,34 @@ if (localStorage.isMenuLateralOpen == undefined || JSON.parse(localStorage.isMen
 } else {
     closeMenu();
 }
+
+document.getElementById("idioma-pt-br").onclick = function () {
+    var idioma = "ptbr";
+
+    localStorage.setItem("idioma", idioma);
+    traduzirPt();
+   
+}
+
+document.getElementById("idioma-en").onclick = function () {
+    var idioma = "en";
+
+    localStorage.setItem("idioma", idioma);
+    traduzirEn();
+}
+
+if (localStorage.idioma == "ptbr") {
+    traduzirPt();
+}
+
+if (localStorage.idioma == "en") {
+    traduzirEn();
+}
+
+function traduzirPt() {
+    console.log(localStorage.idioma);
+}
+
+function traduzirEn() {
+    console.log(localStorage.idioma);
+}
