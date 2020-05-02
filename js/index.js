@@ -1,6 +1,6 @@
 //Controle variaveis do storage
-if (localStorage.nome) {
-    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
+if (localStorage.nomeUsuario) {
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
 }
 
 if (localStorage.darkMode == "true") {
@@ -65,11 +65,11 @@ function showCursos() {
 }
 
 document.getElementById("enviar-usuario").onclick = function () {
-    var nome = document.getElementById("nome-usuario").value;
+    var nomeUsuario = document.getElementById("nome-usuario").value;
 
-    localStorage.setItem("nome", nome);
+    localStorage.setItem("nomeUsuario", nomeUsuario);
 
-    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
 }
 
 //Região de métodos de controle do idioma
