@@ -3,8 +3,8 @@ var initialContentInnerHtml = document.getElementById("content-section").innerHT
 var initialFooterInnerHtml = document.getElementById("page-footer").innerHTML;
 
 //Controle variaveis do storage
-if (localStorage.nomeUsuario) {
-    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
+if (localStorage.nome) {
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
 }
 
 for (let index = 1; index < 5; index++) {
@@ -88,11 +88,19 @@ function showCursos() {
 }
 
 document.getElementById("enviar-usuario").onclick = function () {
-    var nomeUsuario = document.getElementById("nome-usuario").value;
+    var nomeUsuario = document.getElementById("nome-usuario-modal").value;
 
-    localStorage.setItem("nomeUsuario", nomeUsuario);
+    localStorage.setItem("nome", nomeUsuario);
 
-    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
+
+    if(document.getElementById("nome") !== null)
+        document.getElementById("nome").value = localStorage.nome;
+    
+    if(document.getElementById("nome-contato") !== null)
+        document.getElementById("nome-contato").value = localStorage.nome;
+
+    document.getElementById("nome-usuario-modal").value = "";
 }
 
 //Região de métodos de controle do idioma
