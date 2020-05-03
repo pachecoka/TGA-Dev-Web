@@ -9,10 +9,13 @@ if (localStorage.nomeUsuario) {
 for (let index = 1; index < 5; index++) {
     var curso = `curso${index}`;
     var show = `show-${curso}`;
+    var preco = `preco${index}`;
+    var botao = `botao${index}`;
     if(localStorage[curso] == "true") {
-        console.log(curso);
-        console.log(show);
-        document.getElementById(show).innerHTML = document.getElementById(curso).innerHTML;
+        document.getElementById(preco).innerText = "Comprado";
+        document.getElementById(botao).style.dispay = "none";
+    } else {
+        document.getElementById(show).style.dispay = "none";
     }
 }
 
