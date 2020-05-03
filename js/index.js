@@ -41,10 +41,13 @@ function myCourses() {
         var botao = `botao${index}`;
         if(localStorage[curso] == "true") {
             document.getElementById(preco).innerText = "Comprado";
-            document.getElementById(botao).classList.toggle("invisivel");
-            document.getElementById(show).classList.toggle("invisivel");
+            document.getElementById(botao).classList.add("invisivel");
+            document.getElementById(show).classList.remove("invisivel");
+        } else {
+            document.getElementById(botao).classList.remove("invisivel");
+            document.getElementById(show).classList.add("invisivel");
         }
-    }
+    } 
 }
 
 function openMenu() {

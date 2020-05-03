@@ -57,6 +57,11 @@ function clearUserValues(){
   localStorage.setItem("sobrenome", sobrenome);
   localStorage.setItem("telefone", telefone);
   localStorage.setItem("email", email);
+
+  localStorage.setItem("curso1", "false");
+  localStorage.setItem("curso2", "false");
+  localStorage.setItem("curso3", "false");
+  localStorage.setItem("curso4", "false");
 }
 
 function initializeUserFields(){
