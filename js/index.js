@@ -1,5 +1,6 @@
 //guardar html main inicial
-var initialInnerHtml = document.getElementById("main").innerHTML;
+var initialContentInnerHtml = document.getElementById("content-section").innerHTML;
+var initialFooterInnerHtml = document.getElementById("page-footer").innerHTML;
 
 //Controle variaveis do storage
 if (localStorage.nomeUsuario) {
@@ -158,5 +159,6 @@ function trocarIdioma(sigla) {
 //Fim da região de métodos de controle do idioma
 
 document.getElementById("home").onclick = function () {
-    document.getElementById("main").innerHTML = initialInnerHtml;
+    document.getElementById("content-section").innerHTML = initialContentInnerHtml;
+    document.getElementById("page-footer").innerHTML = initialFooterInnerHtml;
 }
