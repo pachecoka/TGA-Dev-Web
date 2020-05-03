@@ -108,6 +108,8 @@ document.getElementById("enviar-usuario").onclick = function () {
         document.getElementById("nome-contato").value = localStorage.nome;
 
     document.getElementById("nome-usuario-modal").value = "";
+
+    myCourses();
 }
 
 //Região de métodos de controle do idioma
