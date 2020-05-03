@@ -237,3 +237,11 @@ footer {
   justify-content: center;
   white-space: pre-line;
 }
+
+.aulas-paragraph {
+  text-align: left;
+}
+
+.heading-aulas {
+  margin-top: 80px;
+}
