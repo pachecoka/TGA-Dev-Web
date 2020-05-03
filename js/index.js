@@ -126,32 +126,25 @@ document.getElementById("idioma-en").onclick = function () {
     trocarIdioma("en");
 };
 
-if (localStorage.idioma == "pt") {
-    console.log(localStorage.idioma);
-    trocarIdioma("pt");
-}
-
 if (localStorage.idioma == "en") {
     console.log(localStorage.idioma);
-    trocarIdioma("en");
+    window.onload=function(){
+      document.getElementById("idioma-en").click();
+    };
 }
 
-//function traduzirPt() {
-//    console.log(localStorage.idioma);
-//    trocarIdioma("pt");
-//}
+if (localStorage.idioma == "pt") {
+    console.log(localStorage.idioma);
+    window.onload=function(){
+      document.getElementById("idioma-pt-br").click();
+    };
+}
 
-//function traduzirEn() {
-//    console.log(localStorage.idioma);
-//    trocarIdioma("en");
-//}
-
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        includedLanguages: 'en,pt'
-    }, 'google_translate_element');
-
-    comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
+function trocarIdioma(sigla) {
+    if (comboGoogleTradutor) {
+        comboGoogleTradutor.value = sigla;
+        changeEvent(comboGoogleTradutor);//Dispara a troca
+    }
 }
 
 function changeEvent(el) {
@@ -165,12 +158,14 @@ function changeEvent(el) {
     }
 }
 
-function trocarIdioma(sigla) {
-    if (comboGoogleTradutor) {
-        comboGoogleTradutor.value = sigla;
-        changeEvent(comboGoogleTradutor);//Dispara a troca
-    }
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        includedLanguages: 'en,pt'
+    }, 'google_translate_element');
+
+    comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
 }
+
 //Fim da região de métodos de controle do idioma
 
 document.getElementById("home").onclick = function () {
