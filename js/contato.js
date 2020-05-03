@@ -9,8 +9,8 @@ document.getElementById("contato").onclick = function () {
         "<div class=\"row\">"+
           "<div class=\"col-md-6\">"+
             "<div class=\"md-form mb-0\">"+
-              "<input type=\"text\" id=\"name\" class=\"form-control\">"+
-              "<label for=\"name\">Seu nome</label>"+
+              "<input type=\"text\" id=\"nome-contato\" class=\"form-control\">"+
+              "<label for=\"nome-contato\">Seu nome</label>"+
             "</div>"+
           "</div>"+
           "<div class=\"col-md-6\">"+
@@ -31,7 +31,7 @@ document.getElementById("contato").onclick = function () {
         "<div class=\"row\">"+
           "<div class=\"col-md-12\">"+
             "<div class=\"md-form\">"+
-              "<textarea type=\"text\" id=\"message\" name=\"message\" rows=\"2\" class=\"form-control md-textarea\"></textarea>"+
+              "<textarea type=\"text\" id=\"message\" rows=\"2\" class=\"form-control md-textarea\"></textarea>"+
               "<label for=\"message\">Sua mensagem</label>"+
             "</div>"+
           "</div>"+
@@ -67,7 +67,7 @@ function enviarContato() {
 
 function initializeFormFields(){
   if((localStorage.nome || localStorage.nome !== undefined)){
-    document.getElementById("name").value = localStorage.nome;
+    document.getElementById("nome-contato").value = localStorage.nome;
   }
 
   if((localStorage.email || localStorage.email !== undefined)){

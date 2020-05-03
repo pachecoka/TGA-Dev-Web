@@ -11,6 +11,9 @@
   --header-text: black;
   --card: white;
   --card-text: black;
+  --btn-footer-text: black;
+  --btn-colored-border: 2px solid cadetblue;
+  --btn-colored-background: cadetblue;
 }
 
 .dark {
@@ -22,11 +25,16 @@
   --header-text: #f1f1f1;
   --card: black;
   --card-text: white;
+  --btn-footer-text: white;
+  --btn-colored-border: 2px solid cadetblue;
+  --btn-colored-background: black;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: static !important;
+    top: 0 !important;
 }
 
 .sidenav {
@@ -197,10 +205,17 @@ nav {
 #clear-usuario{
   border: 2px solid cadetblue;
   margin-right: 15px;
+  color: var(--btn-footer-text);
+}
+
+#update-usuario, #enviar-contato{
+  color: var(--btn-footer-text);
+  border: var(--btn-colored-border);
+  background-color: var(--btn-colored-background);
 }
 
 footer {
-  margin-bottom: 30px;
+  padding-bottom: 5px;
 }
 
 .card-body {

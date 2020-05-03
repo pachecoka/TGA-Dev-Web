@@ -1,9 +1,10 @@
 //guardar html main inicial
-var initialInnerHtml = document.getElementById("main").innerHTML;
+var initialContentInnerHtml = document.getElementById("content-section").innerHTML;
+var initialFooterInnerHtml = document.getElementById("page-footer").innerHTML;
 
 //Controle variaveis do storage
-if (localStorage.nomeUsuario) {
-    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
+if (localStorage.nome) {
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
 }
 
 if (localStorage.darkMode == "true") {
@@ -90,17 +91,24 @@ function showCursos() {
 }
 
 document.getElementById("enviar-usuario").onclick = function () {
-    var nomeUsuario = document.getElementById("nome-usuario").value;
+    var nomeUsuario = document.getElementById("nome-usuario-modal").value;
 
-    localStorage.setItem("nomeUsuario", nomeUsuario);
+    localStorage.setItem("nome", nomeUsuario);
 
-    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
+    document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nome;
+
+    if(document.getElementById("nome") !== null)
+        document.getElementById("nome").value = localStorage.nome;
+    
+    if(document.getElementById("nome-contato") !== null)
+        document.getElementById("nome-contato").value = localStorage.nome;
+
+    document.getElementById("nome-usuario-modal").value = "";
 }
 
 //Região de métodos de controle do idioma
 document.getElementById("idioma-pt-br").onclick = function () {
     var idioma = "pt";
-
     localStorage.setItem("idioma", idioma);
     trocarIdioma("pt");
 
@@ -108,7 +116,6 @@ document.getElementById("idioma-pt-br").onclick = function () {
 
 document.getElementById("idioma-en").onclick = function () {
     var idioma = "en";
-
     localStorage.setItem("idioma", idioma);
     trocarIdioma("en");
 };
@@ -161,5 +168,6 @@ function trocarIdioma(sigla) {
 //Fim da região de métodos de controle do idioma
 
 document.getElementById("home").onclick = function () {
-    document.getElementById("main").innerHTML = initialInnerHtml;
+    document.getElementById("content-section").innerHTML = initialContentInnerHtml;
+    document.getElementById("page-footer").innerHTML = initialFooterInnerHtml;
 }
