@@ -13,7 +13,7 @@ Todas as customizações são guardadas no local storage e carregadas quando o s
 
 * No canto direito do header há a opção de dark mode. Esta configuração inverte as cores do layout do site para cores mais escuras.
 
-* Ainda no canto direito do header há a opção de mudança de linguagem do site. As opções disponíveis são PT-BR e EN-US. A tradução é feita automaticamente utilizando uma API do google.
+* Ainda no canto direito do header há a opção de mudança de idioma do site. As opções disponíveis são PT-BR e EN-US. A tradução é feita automaticamente utilizando uma API do google.
 
 # Funcionalidades
 
