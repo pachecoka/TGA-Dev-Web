@@ -94,6 +94,7 @@ function showCursos() {
 }
 
 document.getElementById("enviar-usuario").onclick = function () {
+    localStorage.clear();
     var nomeUsuario = document.getElementById("nome-usuario-modal").value;
 
     localStorage.setItem("nome", nomeUsuario);
