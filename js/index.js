@@ -6,20 +6,6 @@ if (localStorage.nomeUsuario) {
     document.getElementById("field-nome-usuario").innerHTML = "Olá, " + localStorage.nomeUsuario;
 }
 
-for (let index = 1; index < 5; index++) {
-    var curso = `curso${index}`;
-    var show = `show-${curso}`;
-    var preco = `preco${index}`;
-    var botao = `botao${index}`;
-    if(localStorage[curso] == "true") {
-        document.getElementById(preco).innerText = "Comprado";
-        document.getElementById(botao).classList.toggle("invisivel");
-        document.getElementById(show).classList.toggle("invisivel");
-    } else {
-        
-    }
-}
-
 if (localStorage.darkMode == "true") {
     document.getElementById("darkSwitch").checked = true;
     toggleDarkMode();
@@ -41,6 +27,22 @@ document.getElementById("menu").onclick = function openNav() {
         closeMenu();
     } else {
         openMenu();
+    }
+}
+
+myCourses();
+
+function myCourses() {
+    for (let index = 1; index < 5; index++) {
+        var curso = `curso${index}`;
+        var show = `show-${curso}`;
+        var preco = `preco${index}`;
+        var botao = `botao${index}`;
+        if(localStorage[curso] == "true") {
+            document.getElementById(preco).innerText = "Comprado";
+            document.getElementById(botao).classList.toggle("invisivel");
+            document.getElementById(show).classList.toggle("invisivel");
+        }
     }
 }
 
@@ -70,6 +72,7 @@ function toggleDarkMode() {
 function buyCourse(i) {
     var curso = `curso${i}`;
     localStorage.setItem(curso , "true");
+    myCourses();
 }
 
 function showCursos() {
