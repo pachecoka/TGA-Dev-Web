@@ -227,6 +227,10 @@ footer {
   margin: 5px 0;
 }
 
+.card-text {
+  text-align: left;
+}
+
 .invisivel {
   display: none !important;
 }
