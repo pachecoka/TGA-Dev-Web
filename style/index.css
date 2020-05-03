@@ -236,6 +236,8 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   white-space: pre-line;
+  font-size: 15px;
+  text-align: left;
 }
 
 .aulas-paragraph {
