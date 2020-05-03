@@ -173,4 +173,5 @@ function trocarIdioma(sigla) {
 document.getElementById("home").onclick = function () {
     document.getElementById("content-section").innerHTML = initialContentInnerHtml;
     document.getElementById("page-footer").innerHTML = initialFooterInnerHtml;
+    myCourses();
 }
