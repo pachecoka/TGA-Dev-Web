@@ -97,7 +97,6 @@ document.getElementById("enviar-usuario").onclick = function () {
 //Região de métodos de controle do idioma
 document.getElementById("idioma-pt-br").onclick = function () {
     var idioma = "pt";
-
     localStorage.setItem("idioma", idioma);
     trocarIdioma("pt");
 
@@ -105,7 +104,6 @@ document.getElementById("idioma-pt-br").onclick = function () {
 
 document.getElementById("idioma-en").onclick = function () {
     var idioma = "en";
-
     localStorage.setItem("idioma", idioma);
     trocarIdioma("en");
 };
