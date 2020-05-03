@@ -212,6 +212,6 @@ footer {
   margin: 5px 0;
 }
 
-#invisivel {
+.invisivel {
   display: none !important;
 }

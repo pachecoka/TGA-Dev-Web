@@ -13,9 +13,10 @@ for (let index = 1; index < 5; index++) {
     var botao = `botao${index}`;
     if(localStorage[curso] == "true") {
         document.getElementById(preco).innerText = "Comprado";
-        document.getElementById(botao).style.dispay = "none";
+        document.getElementById(botao).classList.toggle("invisivel");
+        document.getElementById(show).classList.toggle("invisivel");
     } else {
-        document.getElementById(show).style.dispay = "none";
+        
     }
 }
 
